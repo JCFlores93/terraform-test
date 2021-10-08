@@ -1,4 +1,5 @@
 locals {
+    yaml_directory = "yaml-files"
     settings_file = file("yaml-files/cognito.yaml") 
     settings_newbrand_file = file("yaml-files/newbrand.yaml") 
     settings = yamldecode(file("yaml-files/cognito.yaml"))
@@ -12,7 +13,7 @@ locals {
 }
 
 data "utils_deep_merge_yaml" "example" {
-    input = [ for f in fileset("yaml-files", "*.yaml") : file("./yaml-files/${f}") ]
+    input = [ for f in fileset(local.yaml_directory, "*.yaml") : file("./${local.yaml_directory}/${f}") ]
 }
 
 output "deep_merge_output" {
