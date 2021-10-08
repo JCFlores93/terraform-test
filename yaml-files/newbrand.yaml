@@ -1,0 +1,22 @@
+newbrand:
+  tabla1:
+    parent: "test1"
+    column: "test2"
+    id: "test3"
+    fields:
+      test-1: "test1"
+      test-2: "test2"
+  tabla2:
+    parent: "test1"
+    column: "test2"
+    id: "test3"
+    fields:
+      test-1: "test1"
+      test-2: "test2"
+  tabla3:
+    parent: "test1"
+    column: "test2"
+    id: "test3"
+    fields:
+      test-1: "test1"
+      test-2: "test2"
